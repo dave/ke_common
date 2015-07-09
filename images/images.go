@@ -1,3 +1,4 @@
+//go:generate kego
 package images
 
 import (
