@@ -1,11 +1,11 @@
 package images
 
 import (
-	reflect "reflect"
+	"reflect"
 
-	units "github.com/davelondon/ke_common/units"
-	json "kego.io/json"
-	system "kego.io/system"
+	"github.com/davelondon/ke_common/units"
+	"kego.io/json"
+	"kego.io/system"
 )
 
 // Automatically created basic rule for icon

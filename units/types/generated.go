@@ -1,7 +1,7 @@
 package types
 
 import (
-	system "kego.io/system"
+	"kego.io/system"
 	_ "kego.io/system/types"
 )
 

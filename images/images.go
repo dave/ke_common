@@ -21,7 +21,7 @@ func (t *Photo) GetUrl() string {
 	return fmt.Sprintf("%s://%s%s", t.Protocol.Value, t.Server.Value, t.Path.Value)
 }
 
-func (r *Image_rule) Enforce(data interface{}, path string, imports map[string]string) (bool, string, error) {
+func (r *Image_rule) Enforce(data interface{}, path string, aliases map[string]string) (bool, string, error) {
 	i, ok := data.(Image)
 	if !ok {
 		return false, "", kerr.New("OSKCXRKIKC", nil, "Image_rule.Enforce", "data %T does not implement Image", data)

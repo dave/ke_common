@@ -1,10 +1,10 @@
 package words
 
 import (
-	reflect "reflect"
+	"reflect"
 
-	json "kego.io/json"
-	system "kego.io/system"
+	"kego.io/json"
+	"kego.io/system"
 )
 
 // Automatically created basic rule for localizer

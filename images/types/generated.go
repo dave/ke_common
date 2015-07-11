@@ -1,9 +1,9 @@
 package types
 
 import (
-	units "github.com/davelondon/ke_common/units"
+	"github.com/davelondon/ke_common/units"
 	_ "github.com/davelondon/ke_common/units/types"
-	system "kego.io/system"
+	"kego.io/system"
 	_ "kego.io/system/types"
 )
 
