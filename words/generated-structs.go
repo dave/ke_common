@@ -39,9 +39,9 @@ type Translation struct {
 }
 
 func init() {
-	json.RegisterType("github.com/davelondon/ke_common/words", "@localizer", reflect.TypeOf(&Localizer_rule{}))
-	json.RegisterType("github.com/davelondon/ke_common/words", "@simple", reflect.TypeOf(&Simple_rule{}))
-	json.RegisterType("github.com/davelondon/ke_common/words", "@translation", reflect.TypeOf(&Translation_rule{}))
-	json.RegisterType("github.com/davelondon/ke_common/words", "simple", reflect.TypeOf(&Simple{}))
-	json.RegisterType("github.com/davelondon/ke_common/words", "translation", reflect.TypeOf(&Translation{}))
+	json.RegisterType("github.com/davelondon/ke_common/words", "@localizer", reflect.TypeOf(&Localizer_rule{}), 0x8266937074db9a35)
+	json.RegisterType("github.com/davelondon/ke_common/words", "@simple", reflect.TypeOf(&Simple_rule{}), 0xdd35f294171a4fee)
+	json.RegisterType("github.com/davelondon/ke_common/words", "@translation", reflect.TypeOf(&Translation_rule{}), 0xf341b6b3891dc7c9)
+	json.RegisterType("github.com/davelondon/ke_common/words", "simple", reflect.TypeOf(&Simple{}), 0xdd35f294171a4fee)
+	json.RegisterType("github.com/davelondon/ke_common/words", "translation", reflect.TypeOf(&Translation{}), 0xf341b6b3891dc7c9)
 }

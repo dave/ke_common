@@ -34,10 +34,10 @@ func init() {
 	ptr23 := &system.Base{Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "github.com/davelondon/ke_common/units", Name: "@rectangle", Exists: true}}
 	ptr24 := &units.Rectangle_rule{Base: ptr23, RuleBase: (*system.RuleBase)(nil)}
 	ptr25 := &system.Type{Base: ptr15, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"path": ptr17, "protocol": ptr20, "server": ptr22, "size": ptr24}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
-	system.RegisterType("github.com/davelondon/ke_common/images", "@icon", ptr1)
-	system.RegisterType("github.com/davelondon/ke_common/images", "@image", ptr6)
-	system.RegisterType("github.com/davelondon/ke_common/images", "@photo", ptr8)
-	system.RegisterType("github.com/davelondon/ke_common/images", "icon", ptr12)
-	system.RegisterType("github.com/davelondon/ke_common/images", "image", ptr14)
-	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr25)
+	system.RegisterType("github.com/davelondon/ke_common/images", "@icon", ptr1, 0x31466dcde3ac4844)
+	system.RegisterType("github.com/davelondon/ke_common/images", "@image", ptr6, 0xa3f1010f55717184)
+	system.RegisterType("github.com/davelondon/ke_common/images", "@photo", ptr8, 0xf540a935655f2a95)
+	system.RegisterType("github.com/davelondon/ke_common/images", "icon", ptr12, 0x31466dcde3ac4844)
+	system.RegisterType("github.com/davelondon/ke_common/images", "image", ptr14, 0xa3f1010f55717184)
+	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr25, 0xf540a935655f2a95)
 }

@@ -27,10 +27,10 @@ func init() {
 	ptr18 := &system.String_rule{Base: ptr17, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
 	ptr19 := &system.Map_rule{Base: ptr16, RuleBase: (*system.RuleBase)(nil), Items: ptr18, MaxItems: system.Int{Value: 0}, MinItems: system.Int{Value: 0}}
 	ptr20 := &system.Type{Base: ptr12, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"english": ptr15, "translations": ptr19}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/words", Name: "localizer", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
-	system.RegisterType("github.com/davelondon/ke_common/words", "@localizer", ptr1)
-	system.RegisterType("github.com/davelondon/ke_common/words", "@simple", ptr3)
-	system.RegisterType("github.com/davelondon/ke_common/words", "@translation", ptr5)
-	system.RegisterType("github.com/davelondon/ke_common/words", "localizer", ptr7)
-	system.RegisterType("github.com/davelondon/ke_common/words", "simple", ptr11)
-	system.RegisterType("github.com/davelondon/ke_common/words", "translation", ptr20)
+	system.RegisterType("github.com/davelondon/ke_common/words", "@localizer", ptr1, 0x8266937074db9a35)
+	system.RegisterType("github.com/davelondon/ke_common/words", "@simple", ptr3, 0xdd35f294171a4fee)
+	system.RegisterType("github.com/davelondon/ke_common/words", "@translation", ptr5, 0xf341b6b3891dc7c9)
+	system.RegisterType("github.com/davelondon/ke_common/words", "localizer", ptr7, 0x8266937074db9a35)
+	system.RegisterType("github.com/davelondon/ke_common/words", "simple", ptr11, 0xdd35f294171a4fee)
+	system.RegisterType("github.com/davelondon/ke_common/words", "translation", ptr20, 0xf341b6b3891dc7c9)
 }
