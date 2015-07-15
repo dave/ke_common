@@ -2,6 +2,6 @@ type: system:type
 id: rectangle
 fields:
   width:
-    type: system:@number
+    type: system:@int
   height:
-    type: system:@number
+    type: system:@int

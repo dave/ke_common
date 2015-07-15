@@ -25,7 +25,7 @@ func init() {
 	ptr14 := &system.Type{Base: ptr13, Embed: []system.Reference(nil), Fields: map[string]system.Rule(nil), Interface: true, Is: []system.Reference(nil), Native: system.String{Value: "object", Exists: true}, Rule: ptr6}
 	ptr15 := &system.Base{Description: "This represents an image, and contains path, server and protocol separately", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "photo", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
 	ptr16 := &system.Base{Description: "The path for the url - e.g. /foo/bar.jpg", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
-	ptr17 := &system.String_rule{Base: ptr16, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 1, Exists: true}, MinLength: system.Int{Value: 0}, Pattern: system.String{Value: "^/.*$", Exists: true}}
+	ptr17 := &system.String_rule{Base: ptr16, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{Value: "^/.*$", Exists: true}}
 	ptr18 := &system.Base{Description: "The protocol for the url - e.g. http or https", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
 	ptr19 := &system.RuleBase{Optional: true}
 	ptr20 := &system.String_rule{Base: ptr18, RuleBase: ptr19, Default: system.String{Value: "http", Exists: true}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
@@ -36,8 +36,8 @@ func init() {
 	ptr25 := &system.Type{Base: ptr15, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"path": ptr17, "protocol": ptr20, "server": ptr22, "size": ptr24}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
 	system.RegisterType("github.com/davelondon/ke_common/images", "@icon", ptr1, 0x31466dcde3ac4844)
 	system.RegisterType("github.com/davelondon/ke_common/images", "@image", ptr6, 0xa3f1010f55717184)
-	system.RegisterType("github.com/davelondon/ke_common/images", "@photo", ptr8, 0xf540a935655f2a95)
+	system.RegisterType("github.com/davelondon/ke_common/images", "@photo", ptr8, 0xd19da332549fd941)
 	system.RegisterType("github.com/davelondon/ke_common/images", "icon", ptr12, 0x31466dcde3ac4844)
 	system.RegisterType("github.com/davelondon/ke_common/images", "image", ptr14, 0xa3f1010f55717184)
-	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr25, 0xf540a935655f2a95)
+	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr25, 0xd19da332549fd941)
 }

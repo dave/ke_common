@@ -48,7 +48,7 @@ type Photo struct {
 func init() {
 	json.RegisterType("github.com/davelondon/ke_common/images", "@icon", reflect.TypeOf(&Icon_rule{}), 0x31466dcde3ac4844)
 	json.RegisterType("github.com/davelondon/ke_common/images", "@image", reflect.TypeOf(&Image_rule{}), 0xa3f1010f55717184)
-	json.RegisterType("github.com/davelondon/ke_common/images", "@photo", reflect.TypeOf(&Photo_rule{}), 0xf540a935655f2a95)
+	json.RegisterType("github.com/davelondon/ke_common/images", "@photo", reflect.TypeOf(&Photo_rule{}), 0xd19da332549fd941)
 	json.RegisterType("github.com/davelondon/ke_common/images", "icon", reflect.TypeOf(&Icon{}), 0x31466dcde3ac4844)
-	json.RegisterType("github.com/davelondon/ke_common/images", "photo", reflect.TypeOf(&Photo{}), 0xf540a935655f2a95)
+	json.RegisterType("github.com/davelondon/ke_common/images", "photo", reflect.TypeOf(&Photo{}), 0xd19da332549fd941)
 }
