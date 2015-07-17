@@ -19,25 +19,29 @@ func init() {
 	ptr8 := &system.Type{Base: ptr7, Embed: []system.Reference{system.Reference{Package: "kego.io/system", Name: "ruleBase", Exists: true}}, Fields: map[string]system.Rule(nil), Is: []system.Reference{system.Reference{Package: "kego.io/system", Name: "rule", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
 	ptr9 := &system.Base{Description: "This is a type of image, which just contains the url of the image", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "icon", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
 	ptr10 := &system.Base{Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
-	ptr11 := &system.String_rule{Base: ptr10, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
-	ptr12 := &system.Type{Base: ptr9, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"url": ptr11}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
-	ptr13 := &system.Base{Description: "This interface type represents all images - icon and photo", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
-	ptr14 := &system.Type{Base: ptr13, Embed: []system.Reference(nil), Fields: map[string]system.Rule(nil), Interface: true, Is: []system.Reference(nil), Native: system.String{Value: "object", Exists: true}, Rule: ptr6}
-	ptr15 := &system.Base{Description: "This represents an image, and contains path, server and protocol separately", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "photo", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
-	ptr16 := &system.Base{Description: "The path for the url - e.g. /foo/bar.jpg", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
-	ptr17 := &system.String_rule{Base: ptr16, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{Value: "^/.*$", Exists: true}}
-	ptr18 := &system.Base{Description: "The protocol for the url - e.g. http or https", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
-	ptr19 := &system.RuleBase{Optional: true}
-	ptr20 := &system.String_rule{Base: ptr18, RuleBase: ptr19, Default: system.String{Value: "http", Exists: true}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
-	ptr21 := &system.Base{Description: "The server for the url - e.g. www.google.com", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
-	ptr22 := &system.String_rule{Base: ptr21, RuleBase: (*system.RuleBase)(nil), Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
-	ptr23 := &system.Base{Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "github.com/davelondon/ke_common/units", Name: "@rectangle", Exists: true}}
-	ptr24 := &units.Rectangle_rule{Base: ptr23, RuleBase: (*system.RuleBase)(nil)}
-	ptr25 := &system.Type{Base: ptr15, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"path": ptr17, "protocol": ptr20, "server": ptr22, "size": ptr24}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
+	ptr11 := &system.RuleBase{}
+	ptr12 := &system.String_rule{Base: ptr10, RuleBase: ptr11, Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
+	ptr13 := &system.Type{Base: ptr9, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"url": ptr12}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
+	ptr14 := &system.Base{Description: "This interface type represents all images - icon and photo", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
+	ptr15 := &system.Type{Base: ptr14, Embed: []system.Reference(nil), Fields: map[string]system.Rule(nil), Interface: true, Is: []system.Reference(nil), Native: system.String{Value: "object", Exists: true}, Rule: ptr6}
+	ptr16 := &system.Base{Description: "This represents an image, and contains path, server and protocol separately", Id: system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "photo", Exists: true}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "type", Exists: true}}
+	ptr17 := &system.Base{Description: "The path for the url - e.g. /foo/bar.jpg", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
+	ptr18 := &system.RuleBase{}
+	ptr19 := &system.String_rule{Base: ptr17, RuleBase: ptr18, Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{Value: "^/.*$", Exists: true}}
+	ptr20 := &system.Base{Description: "The protocol for the url - e.g. http or https", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
+	ptr21 := &system.RuleBase{Optional: true}
+	ptr22 := &system.String_rule{Base: ptr20, RuleBase: ptr21, Default: system.String{Value: "http", Exists: true}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
+	ptr23 := &system.Base{Description: "The server for the url - e.g. www.google.com", Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "kego.io/system", Name: "@string", Exists: true}}
+	ptr24 := &system.RuleBase{}
+	ptr25 := &system.String_rule{Base: ptr23, RuleBase: ptr24, Default: system.String{}, Enum: []string(nil), Equal: system.String{}, Format: system.String{}, MaxLength: system.Int{Value: 0}, MinLength: system.Int{Value: 0}, Pattern: system.String{}}
+	ptr26 := &system.Base{Id: system.Reference{}, Rules: []system.Rule(nil), Type: system.Reference{Package: "github.com/davelondon/ke_common/units", Name: "@rectangle", Exists: true}}
+	ptr27 := &system.RuleBase{}
+	ptr28 := &units.Rectangle_rule{Base: ptr26, RuleBase: ptr27}
+	ptr29 := &system.Type{Base: ptr16, Embed: []system.Reference(nil), Fields: map[string]system.Rule{"path": ptr19, "protocol": ptr22, "server": ptr25, "size": ptr28}, Is: []system.Reference{system.Reference{Package: "github.com/davelondon/ke_common/images", Name: "image", Exists: true}}, Native: system.String{Value: "object", Exists: true}, Rule: (*system.Type)(nil)}
 	system.RegisterType("github.com/davelondon/ke_common/images", "@icon", ptr1, 0x31466dcde3ac4844)
 	system.RegisterType("github.com/davelondon/ke_common/images", "@image", ptr6, 0xa3f1010f55717184)
 	system.RegisterType("github.com/davelondon/ke_common/images", "@photo", ptr8, 0xd19da332549fd941)
-	system.RegisterType("github.com/davelondon/ke_common/images", "icon", ptr12, 0x31466dcde3ac4844)
-	system.RegisterType("github.com/davelondon/ke_common/images", "image", ptr14, 0xa3f1010f55717184)
-	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr25, 0xd19da332549fd941)
+	system.RegisterType("github.com/davelondon/ke_common/images", "icon", ptr13, 0x31466dcde3ac4844)
+	system.RegisterType("github.com/davelondon/ke_common/images", "image", ptr15, 0xa3f1010f55717184)
+	system.RegisterType("github.com/davelondon/ke_common/images", "photo", ptr29, 0xd19da332549fd941)
 }
