@@ -14,11 +14,11 @@ type Rectangle_rule struct {
 }
 type Rectangle struct {
 	*system.Base
-	Height system.Int
-	Width  system.Int
+	Height system.Int `json:"height"`
+	Width  system.Int `json:"width"`
 }
 
 func init() {
-	json.RegisterType("github.com/davelondon/ke_common/units", "@rectangle", reflect.TypeOf(&Rectangle_rule{}), 0x1dec0b16d337111a)
-	json.RegisterType("github.com/davelondon/ke_common/units", "rectangle", reflect.TypeOf(&Rectangle{}), 0x1dec0b16d337111a)
+	json.RegisterType("github.com/dave/ke_common/units", "@rectangle", reflect.TypeOf(&Rectangle_rule{}), 0x1dec0b16d337111a)
+	json.RegisterType("github.com/dave/ke_common/units", "rectangle", reflect.TypeOf(&Rectangle{}), 0x1dec0b16d337111a)
 }
